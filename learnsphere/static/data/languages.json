@@ -1,0 +1,71 @@
+[
+    {
+        "name": "English",
+        "description": "Aliquip deserunt sunt quis nisi magna laboris deserunt aliquip non id voluptate nostrud. Irure dolore esse eu magna eu proident nostrud pariatur adipisicing nostrud est duis. Do mollit nostrud nisi eiusmod non deserunt eiusmod cillum nisi.",
+        "code": "gb",
+        "start_date": "1970-01-01T08:00:00",
+        "end_date": "1970-01-01T09:00:00",
+        "price": 300,
+        "completion": 57,
+        "modules": [
+            {
+                "name": "Module 1",
+                "grade": 7.5
+            },
+            {
+                "name": "Module 2",
+                "grade": 8
+            },
+            {
+                "name": "Module 3",
+                "grade": null
+            }
+        ]
+    },
+    {
+        "name": "Portuguese",
+        "description": "Eiusmod id qui aliquip ex laboris pariatur pariatur esse incididunt esse. Do adipisicing enim irure do sint occaecat aliquip commodo id velit. Adipisicing ipsum do mollit culpa aute magna ad sit. Ea nisi est proident ad proident nulla proident enim. Do culpa dolor eiusmod irure enim pariatur anim quis deserunt anim non.",
+        "code": "br",
+        "start_date": "1970-01-01T09:00:00",
+        "end_date": "1970-01-01T10:00:00",
+        "price": 300,
+        "completion": 32,
+        "modules": [
+            {
+                "name": "Module 1",
+                "grade": 6
+            },
+            {
+                "name": "Module 2",
+                "grade": null
+            }
+        ]
+    },
+    {
+        "name": "Spanish",
+        "description": "Consectetur aliqua ad dolore reprehenderit reprehenderit mollit enim ipsum do in. Aliqua tempor et cupidatat do officia ea consectetur aute anim velit incididunt dolor officia laborum. Do aute enim labore excepteur anim nulla duis sunt exercitation.",
+        "code": "es",
+        "start_date": "1970-01-01T10:00:00",
+        "end_date": "1970-01-01T11:00:00",
+        "price": 500,
+        "completion": 78,
+        "modules": [
+            {
+                "name": "Module 1",
+                "grade": 9.5
+            },
+            {
+                "name": "Module 2",
+                "grade": 8
+            },
+            {
+                "name": "Module 3",
+                "grade": 10
+            },
+            {
+                "name": "Module 4",
+                "grade": null
+            }
+        ]
+    }
+]

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Language School :: Index</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Candal&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/static/styles/base.css">
+        <link rel="stylesheet" href="/static/styles/components.css">
+
+        <link rel="stylesheet" href="/static/styles/index.css">
+    </head>
+
+    <body>
+        <section class="center">
+            <h1>Learnsphere</h1>
+
+            <img class="logo" src="/static/images/logo.png" alt="Logo">
+        </section>
+
+        <section class="dark grow">
+            <form method="POST">
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                >
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                >
+
+                <button type="submit" class="primary">
+                    Sign in
+                </button>
+            </form>
+
+            <hr class="divider">
+
+            <a href="/sign-up.html">
+                <button class="secondary">
+                    Sign up
+                </button>
+            </a>
+        </section>
+
+        <script type="module" src="/static/scripts/index.js"></script>
+    </body>
+</html>

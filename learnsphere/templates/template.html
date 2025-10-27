@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Language School :: Template</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Candal&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/styles/base.css">
+        <link rel="stylesheet" href="/styles/menu.css">
+        <link rel="stylesheet" href="/styles/components.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="/dashboard.html">
+                <img src="/images/logo.png" alt="Logo">
+            </a>
+
+            <h1>Learnsphere</h1>
+
+            <div class="drawer-toggle"></div>
+        </header>
+
+        <aside data-include="menu">
+            <!-- Dynamic menu content is injected here -->
+        </aside>
+
+        <section class="hero">
+            <img src="/images/flags/gb.svg" alt="Flag for English">
+        </section>
+
+        <section class="center">
+            <h1>Language School</h1>
+            <h2>Language School</h2>
+            <h3>Language School</h3>
+            <h4>Language School</h4>
+            <h5>Language School</h5>
+            <h6>Language School</h6>
+
+            <img src="/images/logo.png" alt="Logo">
+
+            <p>paragraph</p>
+
+            <input type="text" placeholder="Text input">
+
+            <br>
+
+            <input id="checkbox-test" type="checkbox">
+            <label for="checkbox-test">Velit nisi eiusmod deserunt occaecat exercitation consequat id incididunt consequat dolor.</label>
+
+            <br>
+            <br>
+
+            <input id="radio-1" type="radio" name="test">
+            <label for="radio-1"> Label for radio 1</label>
+
+            <br>
+            <br>
+
+            <input id="radio-2" type="radio" name="test">
+            <label for="radio-1"> Label for radio 2</label>
+
+            <br>
+            <br>
+
+            <button>Test</button>
+            <button class="primary">Test</button>
+            <button class="secondary">Test</button>
+
+            <button onclick="history.back()" class="primary small">
+                <!-- arrow left -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><g fill="none"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M3.283 10.94a1.5 1.5 0 0 0 0 2.12l5.656 5.658a1.5 1.5 0 1 0 2.122-2.122L7.965 13.5H19.5a1.5 1.5 0 0 0 0-3H7.965l3.096-3.096a1.5 1.5 0 1 0-2.122-2.121z"/></g></svg>
+
+                Back
+            </button>
+
+            <div class="progress">
+                <span>50% complete</span>
+                <progress value="50" max="100">50%</progress>
+            </div>
+        </section>
+
+        <section>
+            <h1>Welcome, Sandra</h1>
+
+            <div class="language">
+                <div class="mask">
+                    <img src="/images/flags/gb.svg" alt="Flag">
+                </div>
+
+                <a href="#" class="details">
+                    <h2>English</h2>
+
+                    <div class="timetable">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.5V12l3.5 2m5.5-2a9 9 0 1 1-18 0a9 9 0 0 1 18 0"/></svg>
+
+                        8:00 to 9:00, everyday
+                    </div>
+
+                    <div class="price">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="currentColor" d="M15 18.5A6.48 6.48 0 0 1 9.24 15h5.14c.38 0 .73-.21.89-.55c.33-.66-.15-1.45-.89-1.45h-5.8c-.05-.33-.08-.66-.08-1s.03-.67.08-1h5.8c.38 0 .73-.21.89-.55A.994.994 0 0 0 14.38 9H9.24A6.49 6.49 0 0 1 15 5.5c1.25 0 2.42.36 3.42.97c.5.31 1.15.26 1.57-.16c.58-.58.45-1.53-.25-1.96A9.03 9.03 0 0 0 15 3c-3.92 0-7.24 2.51-8.48 6h-2.9c-.38 0-.73.21-.9.55c-.33.67.15 1.45.9 1.45h2.44a8.3 8.3 0 0 0 0 2H3.62c-.38 0-.73.21-.89.55c-.34.67.14 1.45.89 1.45h2.9c1.24 3.49 4.56 6 8.48 6c1.74 0 3.36-.49 4.74-1.35c.69-.43.82-1.39.24-1.97c-.42-.42-1.07-.47-1.57-.15c-.99.62-2.15.97-3.41.97"/></svg>
+
+                        300/mo
+                    </div>
+                </a>
+
+                <label for="lang-en">
+                    <input id="lang-en" type="checkbox">
+                </label>
+            </div>
+
+            <div class="language">
+                <div class="mask">
+                    <img src="/images/flags/br.svg" alt="Flag">
+                </div>
+
+                <a href="#" class="details">
+                    <h2>Portuguese</h2>
+
+                    <div class="timetable">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.5V12l3.5 2m5.5-2a9 9 0 1 1-18 0a9 9 0 0 1 18 0"/></svg>
+
+                        9:00 to 10:00, everyday
+                    </div>
+
+                    <div class="price">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="currentColor" d="M15 18.5A6.48 6.48 0 0 1 9.24 15h5.14c.38 0 .73-.21.89-.55c.33-.66-.15-1.45-.89-1.45h-5.8c-.05-.33-.08-.66-.08-1s.03-.67.08-1h5.8c.38 0 .73-.21.89-.55A.994.994 0 0 0 14.38 9H9.24A6.49 6.49 0 0 1 15 5.5c1.25 0 2.42.36 3.42.97c.5.31 1.15.26 1.57-.16c.58-.58.45-1.53-.25-1.96A9.03 9.03 0 0 0 15 3c-3.92 0-7.24 2.51-8.48 6h-2.9c-.38 0-.73.21-.9.55c-.33.67.15 1.45.9 1.45h2.44a8.3 8.3 0 0 0 0 2H3.62c-.38 0-.73.21-.89.55c-.34.67.14 1.45.89 1.45h2.9c1.24 3.49 4.56 6 8.48 6c1.74 0 3.36-.49 4.74-1.35c.69-.43.82-1.39.24-1.97c-.42-.42-1.07-.47-1.57-.15c-.99.62-2.15.97-3.41.97"/></svg>
+
+                        300/mo
+                    </div>
+                </a>
+
+                <label for="lang-pt">
+                    <input id="lang-pt" type="checkbox">
+                </label>
+            </div>
+        </section>
+
+        <section class="dark">
+            <p>
+                Cillum consequat et minim laborum Lorem pariatur mollit reprehenderit esse eiusmod veniam nulla ut ea. Irure ullamco commodo consectetur exercitation sint officia mollit ullamco ex cupidatat ullamco. Cillum sit consequat culpa laboris ut minim ipsum et sunt mollit. Do aliqua laboris labore laboris irure non Lorem fugiat dolor est adipisicing tempor. Dolore sint deserunt occaecat consectetur anim cupidatat in.
+            </p>
+        </section>
+
+        <section>
+            <div class="language">
+                <div class="mask">
+                    <img src="/images/flags/gb.svg" alt="Flag">
+                </div>
+
+                <a href="#" class="details">
+                    <h2>English</h2>
+
+                    <div class="timetable">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.5V12l3.5 2m5.5-2a9 9 0 1 1-18 0a9 9 0 0 1 18 0"/></svg>
+
+                        8:00 to 9:00, everyday
+                    </div>
+
+                    <div class="price">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="currentColor" d="M15 18.5A6.48 6.48 0 0 1 9.24 15h5.14c.38 0 .73-.21.89-.55c.33-.66-.15-1.45-.89-1.45h-5.8c-.05-.33-.08-.66-.08-1s.03-.67.08-1h5.8c.38 0 .73-.21.89-.55A.994.994 0 0 0 14.38 9H9.24A6.49 6.49 0 0 1 15 5.5c1.25 0 2.42.36 3.42.97c.5.31 1.15.26 1.57-.16c.58-.58.45-1.53-.25-1.96A9.03 9.03 0 0 0 15 3c-3.92 0-7.24 2.51-8.48 6h-2.9c-.38 0-.73.21-.9.55c-.33.67.15 1.45.9 1.45h2.44a8.3 8.3 0 0 0 0 2H3.62c-.38 0-.73.21-.89.55c-.34.67.14 1.45.89 1.45h2.9c1.24 3.49 4.56 6 8.48 6c1.74 0 3.36-.49 4.74-1.35c.69-.43.82-1.39.24-1.97c-.42-.42-1.07-.47-1.57-.15c-.99.62-2.15.97-3.41.97"/></svg>
+
+                        300/mo
+                    </div>
+                </a>
+
+                <progress value="50" max="100">50%</progress>
+            </div>
+
+            <div class="language">
+                <div class="mask">
+                    <img src="/images/flags/br.svg" alt="Flag">
+                </div>
+
+                <a href="#" class="details">
+                    <h2>Portuguese</h2>
+
+                    <div class="timetable">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.5V12l3.5 2m5.5-2a9 9 0 1 1-18 0a9 9 0 0 1 18 0"/></svg>
+
+                        9:00 to 10:00, everyday
+                    </div>
+
+                    <div class="price">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="currentColor" d="M15 18.5A6.48 6.48 0 0 1 9.24 15h5.14c.38 0 .73-.21.89-.55c.33-.66-.15-1.45-.89-1.45h-5.8c-.05-.33-.08-.66-.08-1s.03-.67.08-1h5.8c.38 0 .73-.21.89-.55A.994.994 0 0 0 14.38 9H9.24A6.49 6.49 0 0 1 15 5.5c1.25 0 2.42.36 3.42.97c.5.31 1.15.26 1.57-.16c.58-.58.45-1.53-.25-1.96A9.03 9.03 0 0 0 15 3c-3.92 0-7.24 2.51-8.48 6h-2.9c-.38 0-.73.21-.9.55c-.33.67.15 1.45.9 1.45h2.44a8.3 8.3 0 0 0 0 2H3.62c-.38 0-.73.21-.89.55c-.34.67.14 1.45.89 1.45h2.9c1.24 3.49 4.56 6 8.48 6c1.74 0 3.36-.49 4.74-1.35c.69-.43.82-1.39.24-1.97c-.42-.42-1.07-.47-1.57-.15c-.99.62-2.15.97-3.41.97"/></svg>
+
+                        300/mo
+                    </div>
+                </a>
+
+                <progress value="50" max="100">50%</progress>
+            </div>
+        </section>
+
+        <section class="dark">
+            <button class="primary">Test</button>
+            <button class="secondary">Test</button>
+        </section>
+
+        <footer>
+            <button class="primary">Test</button>
+        </footer>
+
+        <script type="text/javascript" src="/scripts/base.js"></script>
+        <script type="module" src="/scripts/menu.js"></script>
+    </body>
+</html>

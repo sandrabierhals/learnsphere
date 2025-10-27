@@ -1,0 +1,4 @@
+.logo {
+    margin-block: calc(var(--gap) * 4);
+    max-width: 100px;
+}

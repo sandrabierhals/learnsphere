@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Language School :: Template</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Candal&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/static/styles/base.css">
+        <link rel="stylesheet" href="/static/styles/menu.css">
+        <link rel="stylesheet" href="/styles/components.css">
+
+        <link rel="stylesheet" href="/static/styles/profile.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="/static/dashboard.html">
+                <img src="/static/images/logo.png" alt="Logo">
+            </a>
+
+            <h1>Learnsphere</h1>
+
+            <div class="drawer-toggle"></div>
+        </header>
+
+        <aside data-include="menu">
+            <!-- Dynamic menu content is injected here -->
+        </aside>
+
+        <section>
+            <h1>Edit your profile</h1>
+
+            <form method="POST">
+                <label for="first_name">First name</label>
+                <input
+                    id="first_name"
+                    name="first_name"
+                    type="text"
+                    placeholder="First name"
+                >
+
+                <label for="last_name">Last name</label>
+                <input
+                    id="last_name"
+                    name="last_name"
+                    type="text"
+                    placeholder="Last name"
+                >
+
+                <label for="email_address">Email address</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Email address"
+                >
+
+                <div class="password">
+                    <div id="toggle-password"></div>
+
+                    <label for="password">Change your password</label>
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        placeholder="Your new password"
+                    >
+                    <input
+                        hidden
+                        disabled
+                        readonly
+                        id="reveal"
+                        type="text"
+                    >
+                </div>
+
+                <ul class="dim">
+                    <li>minimum of 8 characters</li>
+                    <li>one capital letter</li>
+                    <li>one number</li>
+                    <li>one symbol</li>
+                </ul>
+
+                <footer class="dark">
+                    <button type="submit" class="primary">
+                        Save details
+                    </button>
+
+                    <a href="/static/profile.html">
+                        <button>
+                            Cancel
+                        </button>
+                    </a>
+                </footer>
+            </form>
+        </section>
+
+        <script type="text/javascript" src="/static/scripts/base.js"></script>
+        <script type="module" src="/static/scripts/menu.js"></script>
+        <script type="text/javascript" src="/static/scripts/password.js"></script>
+
+        <script type="module" src="/static/scripts/profile-edit.js"></script>
+    </body>
+</html>

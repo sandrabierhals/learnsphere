@@ -1,0 +1,7 @@
+h1 {
+    margin-bottom: var(--gap);
+}
+
+table {
+    margin-top: var(--gap);
+}
