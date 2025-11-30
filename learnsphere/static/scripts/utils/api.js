@@ -1,6 +1,6 @@
 import CookieManager from '/scripts/utils/cookie-manager.js';
 
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'http://localhost:8000';
 
 const call = async (url, payload = null, method = 'GET') => {
     const config = {

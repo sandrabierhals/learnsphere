@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,25 +12,25 @@
         <link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Candal&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="/static/styles/base.css">
-        <link rel="stylesheet" href="/static/styles/components.css">
-
-        <link rel="stylesheet" href="/static/styles/index.css">
+        <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/components.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/index.css' %}">
     </head>
 
     <body>
         <section class="center">
             <h1>Learnsphere</h1>
 
-            <img class="logo" src="/static/images/logo.png" alt="Logo">
+            <img class="logo" src="{% static 'images/logo.png' %}" alt="Logo">
         </section>
 
         <section class="dark grow">
-            <form method="POST">
+            <form method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
                 <input
-                    type="email"
-                    name="email"
-                    placeholder="Email address"
+                    type="text"
+                    name="username"
+                    placeholder="Username"
                 >
 
                 <input
@@ -45,13 +46,14 @@
 
             <hr class="divider">
 
-            <a href="/sign-up.html">
+            <a href="sign-up.html">
                 <button class="secondary">
                     Sign up
                 </button>
             </a>
         </section>
 
-        <script type="module" src="/static/scripts/index.js"></script>
+        <script type="module" src="{% static 'scripts/index.js' %}">
+        </script>
     </body>
 </html>

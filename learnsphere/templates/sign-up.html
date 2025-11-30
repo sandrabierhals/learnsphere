@@ -1,27 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Language School :: Index</title>
+        <title>Language School :: sign-up</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Candal&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="/static/styles/base.css">
-        <link rel="stylesheet" href="/static/styles/components.css">
-
-        <link rel="stylesheet" href="static/styles/sign-up.css">
+        <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/components.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/sign-up.css' %}">
     </head>
 
     <body>
         <section class="center">
             <h1>Learnsphere</h1>
 
-            <img class="logo" src="/static/images/logo.png" alt="Logo">
+            <img class="logo" src="{% static 'images/logo.png' %}" alt="Logo">
         </section>
 
         <section class="dark grow">
@@ -32,7 +32,8 @@
                 Back
             </button>
 
-            <form method="POST">
+            <form method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
                 <label for="first_name">First name</label>
                 <input
                     id="first_name"
@@ -85,16 +86,18 @@
 
                 <input id="agree" name="agree" type="checkbox" required>
                 <label for="agree">
-                    I agree to the <a href="/terms.html">Terms and Conditions</a>, <a href="/privacy.html">Privacy Policy</a> and <a href="/cookie.html">Cookie Policy</a>.
+                    I agree to the
+                    <a href="{% static 'terms.html' %}">Terms and Conditions</a>,
+                    <a href="{% static 'privacy.html' %}">Privacy Policy</a> and
+                    <a href="{% static 'cookie.html' %}">Cookie Policy</a>.
                 </label>
 
                 <button type="submit" class="secondary">Sign up</button>
             </form>
         </section>
 
-        <script type="text/javascript" src="/static/scripts/base.js"></script>
-        <script type="text/javascript" src="/static/scripts/password.js"></script>
-
-        <script type="module" src="/static/scripts/sign-up.js"></script>
+        <script src="{% static 'scripts/base.js' %}"></script>
+        <script src="{% static 'scripts/password.js' %}"></script>
+        <script type="module" src="{% static 'scripts/sign-up.js' %}"></script>
     </body>
 </html>
