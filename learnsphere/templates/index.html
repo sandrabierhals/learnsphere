@@ -8,7 +8,7 @@
         <title>Language School :: Index</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Candal&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
@@ -25,18 +25,21 @@
         </section>
 
         <section class="dark grow">
-            <form method="POST" action="{% url 'login' %}">
+            <form>
                 {% csrf_token %}
+
                 <input
                     type="text"
-                    name="text"
+                    name="username"
                     placeholder="Username"
+                    required
                 >
 
                 <input
                     type="password"
                     name="password"
                     placeholder="Password"
+                    required
                 >
 
                 <button type="submit" class="primary">
@@ -46,14 +49,16 @@
 
             <hr class="divider">
 
-            <a href="sign-up.html">
+            <a href="register.html">
                 <button class="secondary">
-                    Sign up
+                    Register
                 </button>
             </a>
         </section>
 
-        <script type="module" src="{% static 'scripts/index.js' %}">
-        </script>
+        <script type="text/javascript" src="{% static 'scripts/storage.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/api.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'scripts/index.js' %}"></script>
     </body>
 </html>

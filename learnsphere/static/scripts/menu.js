@@ -1,6 +1,3 @@
-import Api from '/scripts/utils/api.js';
-import CookieManager from '/scripts/utils/cookie-manager.js';
-
 if (document.querySelector('aside')) {
     const aside = document.querySelector('aside');
 
@@ -69,7 +66,7 @@ if (document.querySelector('aside')) {
         const response = await Api.get('/logout');
 
         if (response) {
-            CookieManager.delete('bearer');
+            Storage.cookie.delete('bearer');
             window.location.href = '/';
         }
     });

@@ -1,5 +1,3 @@
-import Api from '/scripts/utils/api.js';
-
 // Get query string
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),

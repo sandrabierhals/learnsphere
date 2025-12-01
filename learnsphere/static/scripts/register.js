@@ -1,5 +1,3 @@
-import Api from '/scripts/utils/api.js';
-
 document.querySelector('form').addEventListener('submit', async (event) => {
     event.preventDefault();
 

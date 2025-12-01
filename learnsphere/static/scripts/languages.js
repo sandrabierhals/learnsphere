@@ -1,5 +1,3 @@
-import Api from '/scripts/utils/api.js';
-
 (async () => {
     const trigger = document.querySelector('button#book');
     const selected = [];

@@ -1,8 +1,6 @@
-import Api from '/scripts/utils/api.js';
-
 (async () => {
     // Fetch the data
-    const user = await Api.get('/profile');
+    const user = await Api.get('profile/');
 
     [...document.querySelectorAll(`input`)].forEach((element) => {
         if (element.name !== 'password') {

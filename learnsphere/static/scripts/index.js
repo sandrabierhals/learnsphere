@@ -1,16 +1,17 @@
-import Api from '/scripts/utils/api.js';
-import CookieManager from '/scripts/utils/cookie-manager.js';
-
 document.querySelector('form').addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const response = await Api.post(
-        'login/',
-        Object.fromEntries([...new FormData(event.target)].filter(([k, v]) => v && [k, v]))
-    );
+    const payload = Object.fromEntries([...new FormData(event.target)].filter(([k, v]) => v && [k, v]));
+    const response = await Api.post('login/', payload);
+
+    console.log(event, payload, response);
+    debugger;
 
     if (response) {
-        CookieManager.set('bearer', response.access_token);
+        Storage.cookie.set('bearer', response.access_token);
         window.location.href = '/dashboard.html';
+    }
+    else {
+        window.location.href = '/';
     }
 });

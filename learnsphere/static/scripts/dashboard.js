@@ -1,8 +1,6 @@
-import Api from '/scripts/utils/api.js';
-
 (async () => {
     // Fetch the user data
-    const user = await Api.get('/profile');
+    const user = await Api.get('profile/');
 
     [...document.querySelectorAll(`[data-user]`)].forEach((element) => {
         element.innerHTML = user[element.dataset.user];

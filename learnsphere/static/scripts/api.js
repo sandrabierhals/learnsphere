@@ -1,5 +1,3 @@
-import CookieManager from '/scripts/utils/cookie-manager.js';
-
 const BASE_URL = 'http://localhost:8000/api/';
 
 const call = async (url, payload = null, method = 'GET') => {
@@ -13,7 +11,7 @@ const call = async (url, payload = null, method = 'GET') => {
     };
 
     try {
-        const bearer = await CookieManager.get('bearer');
+        const bearer = await Storage.cookie.get('bearer');
 
         // Kick back to login if bearer cookie doesn't exist
         const ignoredRoutes = ['login', 'register'];
@@ -59,5 +57,3 @@ const Api = {
     put: (url, payload) => call(url, payload, 'PUT'),
     delete: (url, payload) => call(url, payload, 'DELETE'),
 };
-
-export default Api;
