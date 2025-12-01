@@ -5,7 +5,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const response = await Api.post(
-        '/login',
+        'login/',
         Object.fromEntries([...new FormData(event.target)].filter(([k, v]) => v && [k, v]))
     );
 
