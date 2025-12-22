@@ -17,7 +17,7 @@ const call = async (url, payload = null, method = 'GET') => {
         const ignoredRoutes = ['login', 'register'];
 
         if (!ignoredRoutes.some((item) => url.includes(item)) && !bearer) {
-            window.location.href = '/';
+            window.location.href = '/index.html';
             return false;
         }
 
@@ -30,7 +30,7 @@ const call = async (url, payload = null, method = 'GET') => {
 
         // Kick back to login if expired token
         if (response.status === 401) {
-            window.location.href = '/';
+            window.location.href = '/index.html';
             return false;
         }
 

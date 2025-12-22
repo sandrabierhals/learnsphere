@@ -20,7 +20,7 @@
 
     <body>
         <header>
-            <a href="{% static 'dashboard.html' %}">
+            <a href="dashboard.html">
                 <img src="{% static 'images/logo.png' %}" alt="Logo">
             </a>
 
@@ -37,7 +37,6 @@
             <h1>Edit your profile</h1>
 
             <form method="POST">
-                {% csrf_token %}
                 <label for="first_name">First name</label>
                 <input
                     id="first_name"
@@ -93,7 +92,7 @@
                         Save details
                     </button>
 
-                    <a href="{% static 'profile.html' %}">
+                    <a href="profile.html">
                         <button type="button">Cancel</button>
                     </a>
                 </footer>

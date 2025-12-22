@@ -63,11 +63,17 @@ if (document.querySelector('aside')) {
 
     // Logout
     document.querySelector('#logout').addEventListener('click', async () => {
-        const response = await Api.get('/logout');
+        const response = await Api.post(
+            'logout/',
+            {
+                'refresh': Storage.cookie.get('refresh')
+            },
+        );
 
         if (response) {
             Storage.cookie.delete('bearer');
-            window.location.href = '/';
+            Storage.cookie.delete('refresh');
+            window.location.href = '/index.html';
         }
     });
 }

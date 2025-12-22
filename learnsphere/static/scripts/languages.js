@@ -4,8 +4,8 @@
     const payload = {};
 
     // Fetch the data
-    const languages = await Api.get('/languages');
-    const userLanguages = await Api.get('/user/languages');
+    const languages = await Api.get('languages/');
+    const userLanguages = await Api.get('languages/enrolled/');
     const userLanguageIDs = new Set(userLanguages.map((item) => item.id));
     const availableLanguages = languages.filter(item => !userLanguageIDs.has(item.id))
 
@@ -24,7 +24,7 @@
         // Add content to the element
         element.innerHTML = `
             <div class="mask">
-                <img src="/images/flags/${language.code}.svg" alt="Flag">
+                <img src="/static/images/flags/${language.code}.svg" alt="Flag">
             </div>
 
             <div class="details">
@@ -63,7 +63,7 @@
 
             payload.languages = selected.map((obj) => obj.id);
             payload.quantity = selected.length;
-            payload.total = selected.reduce((sum, obj) => sum + obj.price, 0);
+            payload.total = selected.reduce((sum, obj) => sum + parseFloat(obj.price), 0).toFixed(2);
 
             trigger.innerHTML = selected.length ? `Enroll in ${payload.quantity} - €${payload.total}` : 'Enroll';
             trigger.disabled = !selected.length;
@@ -71,7 +71,7 @@
     });
 
     trigger.addEventListener('click', async () => {
-        const response = await Api.post('/languages/enroll', { 'language_ids': payload.languages });
+        const response = await Api.post('languages/enroll/', { 'language_id': payload.languages[0] });
 
         if (response) {
             window.location.href = '/payment.html';

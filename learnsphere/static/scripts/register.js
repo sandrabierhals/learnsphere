@@ -6,7 +6,10 @@ document.querySelector('form').addEventListener('submit', async (event) => {
         Object.fromEntries([...new FormData(event.target)].filter(([k, v]) => v && [k, v]))
     );
 
+    console.log(event, payload, response);
+    debugger;
+
     if (response) {
-        window.location.href = '/';
+        window.location.href = '/index.html';
     }
 });

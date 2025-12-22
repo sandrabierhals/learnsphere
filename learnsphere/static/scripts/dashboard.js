@@ -7,8 +7,8 @@
     });
 
     // Fetch the languages data
-    const languages = await Api.get('/languages');
-    const userLanguages = await Api.get('/user/languages');
+    const languages = await Api.get('languages/');
+    const userLanguages = await Api.get('languages/enrolled/');
     const userLanguageIDs = userLanguages ? new Set(userLanguages.map((item) => item.id)) : [];
     const availableLanguages = languages.filter(item => !userLanguageIDs.has(item.id))
     const trigger = document.querySelector('a#list');
@@ -51,7 +51,7 @@
             // Add content to the element
             element.innerHTML = `
                 <div class="mask">
-                    <img src="/images/flags/${language.code}.svg" alt="Flag">
+                    <img src="/static/images/flags/${language.code}.svg" alt="Flag">
                 </div>
 
                 <a href="/language.html?lang=${language.id}" class="details">

@@ -15,10 +15,11 @@
 })();
 
 document.querySelector('button#delete').addEventListener('click', async () => {
-    const response = await Api.delete(`profile`);
+    const response = await Api.delete(`profile/`);
 
     if (response) {
         Storage.cookie.delete('bearer');
-        window.location.href = '/';
+        Storage.cookie.delete('refresh');
+        window.location.href = '/index.html';
     }
 });

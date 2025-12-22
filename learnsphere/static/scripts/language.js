@@ -4,7 +4,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 
 (async () => {
-    const language = await Api.get(`/user/languages/${params.lang}`);
+    const language = await Api.get(`languages/${params.lang}/`);
 
     // Populate DOM variables
     [...document.querySelectorAll(`[data-language]`)].forEach((element) => {
@@ -14,7 +14,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 
         switch (key) {
             case 'flag': {
-                element.src = `/images/flags/${language.code}.svg`;
+                element.src = `/static/images/flags/${language.code}.svg`;
                 element.alt = `Flag for ${language.name} language`;
 
                 break;
@@ -56,7 +56,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 })();
 
 document.querySelector('button#cancel').addEventListener('click', async () => {
-    const response = await Api.delete(`/user/languages/${params.lang}`);
+    const response = await Api.delete(`languages/${params.lang}/unenroll/`);
 
     if (response) {
         window.location.href = '/dashboard.html';

@@ -27,11 +27,11 @@ A backend project using Django, with the frontend fully integrated through HTML 
    docker run -p 8888:8000 learnsphere
    ```
 
-4. Create a python virtual environment:
+4. Create a python virtual environment in the project's root:
 
    ```bash
    python -m venv venv
-   source ./venv/bin/activate
+   source venv/bin/activate
    pip install -r requirements.txt
    ```
 

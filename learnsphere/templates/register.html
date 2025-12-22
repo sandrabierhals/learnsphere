@@ -33,7 +33,6 @@
             </button>
 
             <form method="POST" action="{% url 'register' %}">
-                {% csrf_token %}
                 <label for="first_name">First name</label>
                 <input
                     id="first_name"
@@ -87,9 +86,9 @@
                 <input id="agree" name="agree" type="checkbox" required>
                 <label for="agree">
                     I agree to the
-                    <a href="{% static 'terms.html' %}">Terms and Conditions</a>,
-                    <a href="{% static 'privacy.html' %}">Privacy Policy</a> and
-                    <a href="{% static 'cookie.html' %}">Cookie Policy</a>.
+                    <a href="/terms.html">Terms and Conditions</a>,
+                    <a href="/privacy.html">Privacy Policy</a> and
+                    <a href="/cookie.html">Cookie Policy</a>.
                 </label>
 
                 <button type="submit" class="secondary">Register</button>

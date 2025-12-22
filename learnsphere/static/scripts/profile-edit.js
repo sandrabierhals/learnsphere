@@ -13,7 +13,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const response = await Api.put(
-        '/profile',
+        'profile/',
         Object.fromEntries([...new FormData(event.target)].filter(([k, v]) => v && [k, v]))
     );
 

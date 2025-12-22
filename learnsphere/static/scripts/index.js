@@ -1,17 +1,17 @@
 document.querySelector('form').addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const payload = Object.fromEntries([...new FormData(event.target)].filter(([k, v]) => v && [k, v]));
-    const response = await Api.post('login/', payload);
-
-    console.log(event, payload, response);
-    debugger;
+    const response = await Api.post(
+        'login/',
+        Object.fromEntries([...new FormData(event.target)].filter(([k, v]) => v && [k, v]))
+    );
 
     if (response) {
-        Storage.cookie.set('bearer', response.access_token);
+        Storage.cookie.set('bearer', response.access);
+        Storage.cookie.set('refresh', response.refresh);
         window.location.href = '/dashboard.html';
     }
     else {
-        window.location.href = '/';
+        window.location.href = '/index.html';
     }
 });
